@@ -1,11 +1,11 @@
 name: IAC
 on:
   push:
-    branches: master
+    branches: "master"
     paths:
     - terraform/**
   pull_request:
-    branches: master
+    branches: "master"
     paths:
     - terraform/**
 env:
