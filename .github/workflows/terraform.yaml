@@ -1,17 +1,17 @@
 name: IAC
 on:
   push:
-    branches: 
+    branches:
     - master
     paths:
     - terraform/**
   pull_request:
-    branches: 
+    branches:
     - master
     paths:
     - terraform/**
 env:
-  # credentials for our deployment to AWS
+  # credentials for our deployment to our AWS
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   # S3 bucket for the terraform state. 
