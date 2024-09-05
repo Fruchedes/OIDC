@@ -1,11 +1,11 @@
 
 
-# fetches TLS certificate from the specified URL
+#fetches TLS certificate from the specified URL
 data "tls_certificate" "this" {
   url = "https://token.actions.githubusercontent.com"
 }
 
-#creates an AWS IAM OpenID Connect (OIDC) provider, the OIDC endpoint for GitHub Actions.
+#creates an AWS OpenID Connect (OIDC) provider, the OIDC endpoint for GitHub Actions.
 resource "aws_iam_openid_connect_provider" "github_eks_oidc_provider" {
   url = "https://token.actions.githubusercontent.com"
   client_id_list = ["sts.amazonaws.com"]
