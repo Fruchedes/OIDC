@@ -1,6 +1,6 @@
 name: IAC
 on:
-  workflow_dispatch:
+  push:
     branches:
     - master
     paths:
@@ -43,21 +43,9 @@ jobs:
 
     - name: Terraform Plan
       id: plan
-<<<<<<< HEAD
       run: terraform plan
 
     - name: Terraform Apply
       id: apply
       run: terraform apply --auto-approve
-=======
-      run: terraform plan 
-
-    - name: Terraform Apply
-      id: apply
-      run: terraform apply --auto-approve 
-
->>>>>>> 6cd2aad079d788ef671b66936517a8117112efae
-
-
-
 
