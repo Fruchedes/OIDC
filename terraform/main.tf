@@ -1,5 +1,3 @@
-
-
 #fetches TLS certificate from the specified URL
 data "tls_certificate" "this" {
   url = "https://token.actions.githubusercontent.com"
